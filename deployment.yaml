@@ -1,14 +1,14 @@
 stages:
 - stage: deploy
   jobs:
-  - deployment: DeployWeb
-    displayName: deploy Web App
+  - deployment: DeployAKS
+    displayName: deploy AKS Cluster Mock
     pool:
       vmImage: 'Ubuntu-latest'
     # creates an environment if it doesn't exist
-    environment: 'Roll-Environ'
+    environment: 'Roll-Environment-dev'
     strategy:
       runOnce:
         deploy:
           steps:
-          - script: echo Hello world
+          - script: deploying AKS Cluster through Terraform
