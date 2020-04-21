@@ -1,11 +1,12 @@
-  stage: deploy
+stages:
+- stage: deploy
   jobs:
   - deployment: DeployWeb
     displayName: deploy Web App
     pool:
       vmImage: 'Ubuntu-latest'
     # creates an environment if it doesn't exist
-    environment: 'Roll-Environment'
+    environment: 'Roll-Environ'
     strategy:
       runOnce:
         deploy:
