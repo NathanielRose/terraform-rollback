@@ -11,4 +11,4 @@ stages:
       runOnce:
         deploy:
           steps:
-          - script: deploying AKS Cluster through Terraform
+          - script: echo deploying AKS Cluster through Terraform
